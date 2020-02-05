@@ -23,13 +23,13 @@ planets.forEach(planet => {
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 */
 const newPlanets = planets.map(planet => {
-    const firstLetter = planet.charAt(0)
-    const splitWord = planet.split(firstLetter)
-    const uppercase = splitWord[0].toUpperCase;
-    const newWord = uppercase + splitWord[1];
-    console.log(newWord);
-    // .toUpperCase();
+    const firstLetter = planet.charAt(0).toUpperCase();
+    const remainingLetters = planet.slice(1);
+    const newWord = firstLetter + remainingLetters;
+    return newWord;
 })
+
+console.log(newPlanets);
 
 
 /*
